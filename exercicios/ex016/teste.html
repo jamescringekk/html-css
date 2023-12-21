@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop de Abertura de Abas</title>
+
+</head>
+<body>
+
+<script>
+    function abrirAba() {
+        var url = "https://www.exemplo.com";
+        window.open(url, "_blank");
+    }
+
+    function loopDeAbas() {
+        // Defina o número desejado de abas a serem abertas
+        var numeroDeAbas = 50;
+
+        // Tempo entre cada abertura de aba (em milissegundos)
+        var intervaloDeTempo = 5; // 0.5 segundos
+
+        for (var i = 0; i < numeroDeAbas; i++) {
+            setTimeout(abrirAba, i * intervaloDeTempo);
+        }
+    }
+
+    // Inicie o loop quando a página carregar
+    window.onload = loopDeAbas;
+</script>
+
+</body>
+</html>
